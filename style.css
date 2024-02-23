@@ -1,0 +1,142 @@
+/* general */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+
+}
+
+.wrapper {
+    height: 100vh;
+    background-color: bisque;
+}
+
+img {
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.content {
+    height: calc(100vh - 80px);
+    width: 100%;
+    background-color: aqua;
+}
+
+#toolbar {
+    background-color: red;
+    height: 80px;
+}
+
+#sidebar {
+    width: 200px;
+    flex-shrink: 0;
+    background-color: yellow;
+}
+
+main {
+    flex-grow: 1;
+    padding-top: 100px;
+    overflow-y: auto;
+}
+
+.menu {
+    text-transform: uppercase;
+}
+
+.header {
+    background-color: rgba(0, 0, 0, 0.393);
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 200px;
+    width: calc(100% - 200px);
+}
+
+/* utility */
+
+.small-padding {
+    padding: 10px;
+}
+
+.big-padding {
+    padding: 20px;
+}
+
+/* flex utility */
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.jsutify-center {
+    justify-content: center;
+}
+
+.small-gap {
+    gap: 20px;
+    padding: 10px;
+}
+
+
+
+.card {
+    width: calc(100% / 6 - 10px);
+    padding: 10px;
+    
+}
+
+/* media queris */
+
+@media all and (max-width: 776px ) {
+    .card {
+        width: calc(100% / 4 - 10px);
+        
+    }
+
+    .row {
+        flex-wrap: wrap;
+    }
+
+    .menu > ul {
+        flex-wrap: wrap;
+    }
+}
+
+@media all and (max-width: 576px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
+
+
+
