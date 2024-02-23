@@ -121,12 +121,32 @@ main {
     padding: 20px;
 }
 
+.big-rght-padding {
+    padding-right: 50px;
+}
+
 .txt-white {
     color: white;
 }
 
+.txt-center {
+    text-align: center;
+}
+
 .txt-gray {
     color: var(--txt-grey-color);
+}
+
+.cross {
+    color: black;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 1.5rem;
+    font-weight: 800;
+    display: inline-block;
+    background-color: var(--txt-grey-color);
 }
 
 
@@ -149,6 +169,10 @@ main {
     justify-content: center;
 }
 
+.jsutify-end {
+    justify-content: flex-end;
+}
+
 .small-gap {
     gap: 20px;
     padding: 10px;
@@ -161,6 +185,19 @@ main {
 .column-direction {
     flex-direction: column;
 }
+
+/* button */
+
+.btn {
+    text-transform:uppercase;
+    color: white;
+    display: block;
+    border: 2px solid white;
+    border-radius: 100px;
+    padding: 10px 30px;
+
+}
+
 
 /* media queris */
 
@@ -205,7 +242,21 @@ main {
         position: fixed;
         top: 0;
         left: 200px;
-        width: calc(100% - 200px);
+        width: calc(100% - 50px);
+    }
+
+    .des {
+        display: none;
+    }
+
+    .small-logo {
+        display: block;
+        width: 45px;
+        padding: 10px;
+    }
+
+    .logo {
+        display: none;
     }
   
 
