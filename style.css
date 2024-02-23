@@ -14,6 +14,10 @@ body {
 }
 
 :root {
+    --main-color: #1C1F26;
+    --side-color: #000000;
+    --tool-bar-color: #2C2C2C;
+    --txt-grey-color: #7F8185;
 
 }
 
@@ -37,18 +41,18 @@ a {
 .content {
     height: calc(100vh - 80px);
     width: 100%;
-    background-color: aqua;
+    background-color: var(--main-color)
 }
 
 #toolbar {
-    background-color: red;
+    background-color: var(--tool-bar-color);
     height: 80px;
 }
 
 #sidebar {
     width: 200px;
     flex-shrink: 0;
-    background-color: yellow;
+    background-color: var(--side-color);
 }
 
 main {
@@ -78,6 +82,14 @@ main {
 
 .big-padding {
     padding: 20px;
+}
+
+.txt-white {
+    color: white;
+}
+
+.txt-gray {
+    color: var(--txt-grey-color);
 }
 
 /* flex utility */
@@ -136,7 +148,27 @@ main {
     .card {
         width: 90%;
     }
+
 }
 
+@media all and (max-width: 300px) {
+    #sidebar {
+        width: 50px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .header {
+        background-color: rgba(0, 0, 0, 0.393);
+        height: 80px;
+        position: fixed;
+        top: 0;
+        left: 200px;
+        width: calc(100% - 200px);
+    }
+  
 
 
+}
