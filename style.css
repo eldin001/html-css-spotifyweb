@@ -18,12 +18,10 @@ body {
     --side-color: #000000;
     --tool-bar-color: #2C2C2C;
     --txt-grey-color: #7F8185;
-
 }
 
 .wrapper {
     height: 100vh;
-    background-color: bisque;
 }
 
 img {
@@ -39,19 +37,29 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    color: white;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+
 .content {
-    height: calc(100vh - 80px);
+    height: calc(100vh - 70px);
     width: 100%;
     background-color: var(--main-color)
 }
 
 #toolbar {
     background-color: var(--tool-bar-color);
-    height: 80px;
+    height: 70px;   
 }
 
 #sidebar {
     width: 200px;
+    height: calc(100vh - 70px);
     flex-shrink: 0;
     background-color: var(--side-color);
 }
@@ -62,13 +70,19 @@ main {
     overflow-y: auto;
 }
 
+hr {
+    margin: 10px;
+    width: 80%;
+}
+
 .menu {
     text-transform: uppercase;
 }
 
+
 .header {
     background-color: rgba(0, 0, 0, 0.393);
-    height: 80px;
+    height: 70px;
     position: fixed;
     top: 0;
     left: 200px;
@@ -100,13 +114,18 @@ main {
 
 /* utility */
 
+.container-sidebar {
+    height: calc(100% - 70px);
+    
+}
+
 .dbl-font {
     font-size: 1.5rem;
     font-weight: 700;
 }
 
 .sml-font {
-    font-size: 0.7em;
+    font-size: 0.9em;
 }
 
 .small-padding {
@@ -129,15 +148,15 @@ main {
     color: white;
 }
 
-.txt-center {
-    text-align: center;
-}
-
 .txt-gray {
     color: var(--txt-grey-color);
 }
 
-.cross {
+.txt-center {
+    text-align: center;
+}
+
+.cross {    
     color: black;
     height: 30px;
     width: 30px;
@@ -149,6 +168,9 @@ main {
     background-color: var(--txt-grey-color);
 }
 
+.plaied {
+    width: 50px;
+}
 
 /* flex utility */
 
@@ -165,12 +187,20 @@ main {
     align-content: center;
 }
 
+.align-end {
+    align-items: flex-end;
+}
+
 .jsutify-center {
     justify-content: center;
 }
 
 .jsutify-end {
     justify-content: flex-end;
+}
+
+.jsutify-between {
+    justify-content: space-between;
 }
 
 .small-gap {
@@ -198,13 +228,11 @@ main {
 
 }
 
-
 /* media queris */
 
 @media all and (max-width: 776px ) {
     .card {
-        width: calc(100% / 4 - 10px);
-        
+        width: calc(100% / 4 - 10px);   
     }
 
     .row {
@@ -227,7 +255,7 @@ main {
 
 }
 
-@media all and (max-width: 300px) {
+@media all and (max-width: 400px) {
     #sidebar {
         width: 50px;
     }
@@ -238,11 +266,11 @@ main {
 
     .header {
         background-color: rgba(0, 0, 0, 0.393);
-        height: 80px;
+        height: 60px;
         position: fixed;
         top: 0;
-        left: 200px;
-        width: calc(100% - 50px);
+        left: 45px;
+        width: calc(100% - 45px);
     }
 
     .des {
