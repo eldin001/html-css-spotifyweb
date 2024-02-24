@@ -37,15 +37,6 @@ a {
     text-decoration: none;
 }
 
-a:hover {
-    color: white;
-}
-
-.btn:hover {
-    transform: scale(1.1);
-    transition: all 0.5s;
-}
-
 .content {
     height: calc(100vh - 70px);
     width: 100%;
@@ -87,6 +78,7 @@ hr {
     top: 0;
     left: 200px;
     width: calc(100% - 200px);
+    z-index: 1001;
 }
 
 .card {
@@ -112,11 +104,10 @@ hr {
     overflow: hidden;
 }
 
-/* utility */
+/* sizing utility */
 
 .container-sidebar {
-    height: calc(100% - 70px);
-    
+    height: calc(100% - 70px);    
 }
 
 .dbl-font {
@@ -143,6 +134,8 @@ hr {
 .big-rght-padding {
     padding-right: 50px;
 }
+
+/* text utility */
 
 .txt-white {
     color: white;
@@ -216,6 +209,50 @@ hr {
     flex-direction: column;
 }
 
+/* hover effect */
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+  }
+  
+.top-card:hover .overlay {
+    opacity: 1;
+  }
+  
+.top-card {
+    position: relative;
+  }
+
+.icon-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 50px; 
+  }
+
+a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    transition: .3s ease;
+}
+
+.top-card:hover {
+    filter: grayscale(80%);
+}
+
 /* button */
 
 .btn {
@@ -225,7 +262,6 @@ hr {
     border: 2px solid white;
     border-radius: 100px;
     padding: 10px 30px;
-
 }
 
 /* media queris */
