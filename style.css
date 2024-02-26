@@ -272,8 +272,11 @@ main {
 }
 
 .menu > ul li a:hover {
-    border-bottom: 3px solid greenyellow;
-    
+    border-bottom: 3px solid greenyellow;   
+}
+
+.background-gray {
+    background-color: var(--txt-grey-colorS);
 }
 
 .overlay {
@@ -496,6 +499,7 @@ a:hover {
     .btn {
         text-align: center;
         padding: 10px;
+        overflow: hidden;
     }
 
     .card {
