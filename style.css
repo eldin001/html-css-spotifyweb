@@ -48,7 +48,7 @@ a {
     height: 80px; 
     min-width: 0;
     overflow: hidden;
-    
+    z-index: 9000;
 }
 
 .right-toolbar {
@@ -68,11 +68,32 @@ a {
 
 #sidebar {
     width: 200px;
-    height: calc(100vh - 80px);
+    height: 100%;   
     flex-shrink: 0;
     background-color: var(--side-color);
-    overflow: auto;
 }
+
+#sidebar .top-sidebar {
+    height: calc(100% - 80px);
+    width: 100%;
+    min-height: 0;
+}
+
+.playlist {
+    height: 100%;
+    overflow:auto;
+}
+
+#sidebar .footer-sidebar {
+    height: 80px;
+    width: 100%;   
+    background-color: var(--side-color); 
+}
+
+#sidebar .playlist ul {
+    height: 100%;
+}
+
 
 main {
     flex-grow: 1;
@@ -416,6 +437,11 @@ a:hover {
 }
 
 /* media queris */
+@media all and (max-width: 1200px) {
+    .card {
+        width: calc(100% / 4 - 10px);
+    }
+}
 
 @media all and (max-width: 992px ) {
     .card {
@@ -441,6 +467,11 @@ a:hover {
 @media all and (max-width: 576px) {
     #sidebar {
         width: 50px;
+    }
+
+    .btn {
+        text-align: center;
+        padding: 10px;
     }
 
     .card {
