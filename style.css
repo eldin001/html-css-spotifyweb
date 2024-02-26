@@ -46,7 +46,24 @@ a {
 #toolbar {
     background-color: var(--tool-bar-color);
     height: 80px; 
-    width: 100vw;  
+    min-width: 0;
+    overflow: hidden;
+    
+}
+
+.right-toolbar {
+    max-width: 100%;
+    min-width: 0;
+}
+
+.center-toolbar {
+    max-width: 100%;
+    min-width: 0;
+}
+
+.left-toolbar {
+    max-width: 100%;
+    min-width: 0;
 }
 
 #sidebar {
@@ -211,8 +228,6 @@ hr {
     flex-direction: row;
 }
 
-
-
 .column-direction {
     flex-direction: column;
 }
@@ -227,7 +242,7 @@ hr {
     
 }
 
-/* album hover effect */
+/* hover effect */
 
 .overlay {
     position: absolute;
@@ -250,12 +265,13 @@ hr {
   }
 
 .icon-play {
+    display: block;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    font-size: 50px; 
+    font-size: 5vw;
   }
 
 a:hover {
@@ -267,11 +283,24 @@ a:hover {
     transition: .3s ease;
 }
 
+.center-toolbar i:hover {
+    transform: scale(1.5);
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+.info-currently .txt-gray:hover {
+    text-decoration: underline;
+    color: white;
+
+}
+
 .top-card:hover {
     filter: grayscale(80%);
 }
 
 /* music player bar */
+
 .progress {
     background: rgba(255,255,255,0.1);
     justify-content: flex-start;
@@ -296,6 +325,7 @@ a:hover {
   .progress-value:hover{
     background: green;
     transition: 0.5s;
+    cursor: pointer;
   }
 
   .progress-value:hover .pointer-progress {
@@ -310,7 +340,7 @@ a:hover {
     background-color: green;
     position: relative;
     left: 98%;
-    bottom: 3px;
+    bottom: 4px;
     border-radius: 50%;
   }
 
@@ -347,11 +377,27 @@ a:hover {
     display: flex;
   }
 
-  .progress-value:hover{
+  .progress-value-volume:hover{
     background: green;
     transition: 0.5s;
+    cursor: pointer;
   }
 
+  .pointer-progress-volume {
+    opacity: 0;
+    height: 1rem;
+    width: 1rem;
+    background-color: green;
+    position: relative;
+    left: 96%;
+    bottom: 4px;
+    border-radius: 50%;
+  }
+
+  .progress-value-volume:hover .pointer-progress-volume {
+    opacity: 1;
+    transition: 0.5s;
+  }
 
   .timing {
     padding: 5px;
@@ -385,8 +431,6 @@ a:hover {
     }
 }
 
-
-
 @media all and (max-width: 576px) {
     .row {
         flex-direction: column;
@@ -398,7 +442,7 @@ a:hover {
 
 }
 
-@media all and (max-width: 400px) {
+@media all and (max-width: 500px) {
     #sidebar {
         width: 50px;
     }
