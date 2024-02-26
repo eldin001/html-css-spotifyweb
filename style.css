@@ -47,12 +47,41 @@ a {
     background-color: var(--main-color)
 }
 
+/* sidebar */
+
+#sidebar {
+    width: 200px;
+    height: 100%;   
+    flex-shrink: 0;
+    background-color: var(--side-color);
+    overflow: hidden;
+}
+
+#sidebar .top-sidebar {
+    height: calc(100% - 80px);
+    width: 100%;
+    min-height: 0;
+    overflow: hidden;
+}
+
+#sidebar .footer-sidebar {
+    height: 80px;
+    width: 100%;   
+    background-color: var(--side-color); 
+    overflow: hidden;
+}
+
+#sidebar .playlist ul {
+    height: 100%;
+}
+
+/* toolbar */
+
 #toolbar {
     background-color: var(--tool-bar-color);
     height: 80px; 
-    min-width: 0;
     overflow: hidden;
-    z-index: 9000;
+    z-index: 10002;
 }
 
 .right-toolbar {
@@ -70,17 +99,9 @@ a {
     min-width: 0;
 }
 
-#sidebar {
-    width: 200px;
-    height: 100%;   
-    flex-shrink: 0;
-    background-color: var(--side-color);
-}
-
-#sidebar .top-sidebar {
-    height: calc(100% - 80px);
-    width: 100%;
-    min-height: 0;
+hr {
+    margin: auto;
+    width: 90%;
 }
 
 .playlist {
@@ -90,16 +111,7 @@ a {
     scrollbar-width: 100px;
 }
 
-#sidebar .footer-sidebar {
-    height: 80px;
-    width: 100%;   
-    background-color: var(--side-color); 
-}
-
-#sidebar .playlist ul {
-    height: 100%;
-}
-
+/* main */
 
 main {
     flex-grow: 1;
@@ -107,15 +119,9 @@ main {
     overflow-y: auto;
 }
 
-hr {
-    margin: auto;
-    width: 90%;
-}
-
 .menu {
     text-transform: uppercase;
 }
-
 
 .header {
     background-color: rgba(0, 0, 0, 0.393);
@@ -123,6 +129,7 @@ hr {
     position: fixed;
     top: 0;
     left: 200px;
+    right: 0;
     width: calc(100% - 200px);
     z-index: 1001;
 }
@@ -130,7 +137,6 @@ hr {
 .card {
     width: calc(100% / 6 - 10px);
     padding: 10px;
-    
 }
 
 .small-logo {
