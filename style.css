@@ -271,7 +271,7 @@ hr {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    font-size: 5vw;
+    font-size: 45px;
   }
 
 a:hover {
@@ -417,9 +417,9 @@ a:hover {
 
 /* media queris */
 
-@media all and (max-width: 776px ) {
+@media all and (max-width: 992px ) {
     .card {
-        width: calc(100% / 4 - 10px);   
+        width: calc(100% / 3 - 10px);   
     }
 
     .row {
@@ -431,18 +431,14 @@ a:hover {
     }
 }
 
-@media all and (max-width: 576px) {
-    .row {
-        flex-direction: column;
-    }
-
+@media all and (max-width: 768px) {
     .card {
-        width: 90%;
+        width: calc(100% / 2 - 10px);
     }
 
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 576px) {
     #sidebar {
         width: 50px;
     }
