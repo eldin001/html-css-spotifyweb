@@ -201,6 +201,12 @@ input {
     margin: 10px;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
+}
+
+.card:hover img {
+    transform: rotate(-40deg);
+    transition: all 0.3s;
 }
 
 .card.first {
@@ -262,6 +268,8 @@ img {
 .sidebar-img img {
     border-radius: 5px;
 }
+
+
 
 
 
