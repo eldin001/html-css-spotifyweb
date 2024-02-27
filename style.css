@@ -13,7 +13,7 @@ body {
   font-style: normal;
 }
 
-:root {
+:root { 
     --main-color: #1C1F26;
     --side-color: #000000;
     --tool-bar-color: #2C2C2C;
@@ -44,7 +44,8 @@ a {
 .content {
     height: calc(100vh - 80px);
     width: 100%;
-    background-color: var(--main-color)
+    background-color: var(--main-color);
+    overflow: hidden;
 }
 
 /* sidebar */
@@ -55,6 +56,8 @@ a {
     flex-shrink: 0;
     background-color: var(--side-color);
     overflow: hidden;
+    min-height: 480px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 #sidebar .top-sidebar {
@@ -259,7 +262,9 @@ main {
 
 .flex-row {
     flex-direction: row;
+    height: ;
 }
+
 
 .column-direction {
     flex-direction: column;
@@ -340,8 +345,6 @@ a:hover {
 .icon-toolbar a:hover {
     color: white;
 }
-
-
 
 /* music player bar */
 
@@ -489,6 +492,10 @@ a:hover {
         display: none;
     }
 
+    .menu ul a {
+        font-size: 2rem;
+    }
+
 }
 
 @media all and (max-width: 576px) {
@@ -533,10 +540,6 @@ a:hover {
         display: none;
     }
 
-    .bottom-center-toolbar {
-        display: none;
-    }
-
     .right-toolbar {
         display: none;
     }
@@ -554,5 +557,17 @@ a:hover {
 
     .top-center-toolbar i{
         font-size: 40px;
+    }
+}
+
+@media all and (max-height: 200px) {
+    .header {
+        display: none;
+    }
+
+    #toolbar {
+        min-height: 80px;
+        max-height: 80px;
+        overflow: hidden;
     }
 }
