@@ -64,11 +64,6 @@ body {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.toolbar {
-    height: 80px;
-    background-color: rebeccapurple;
-}
-
 .top-sidebar {
     height: 100px;
     border-radius: 10px;
@@ -128,12 +123,23 @@ body {
 .wrap {
     flex-wrap: wrap;
 }
+.jsutify-between {
+    justify-content: space-between;
+}
+
+.column-direction {
+    flex-direction: column;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
 
 .d-flex {
     display: flex;
 }
 
-.justify-center {
+.jsutify-center {
     justify-content: center;
 }
 
@@ -268,6 +274,217 @@ img {
 .sidebar-img img {
     border-radius: 5px;
 }
+
+.btn:hover {
+    background-color: green;
+    transition:all 0.3s;
+
+}
+
+/* toolbar */
+#toolbar {
+    background-color: var(--tool-bar-color);
+    height: 80px; 
+    overflow: hidden;
+    z-index: 10002;
+}
+
+.currently {
+    width: 50px;
+}
+
+.right-toolbar {
+    max-width: 100%;
+    min-width: 0;
+}
+
+.center-toolbar {
+    max-width: 100%;
+    min-width: 0;
+}
+
+.left-toolbar {
+    max-width: 100%;
+    min-width: 0;
+}
+
+
+/* music player bar */
+
+.progress {
+    background: rgba(255,255,255,0.1);
+    justify-content: flex-start;
+    border-radius: 100px;
+    align-items: center;
+    position: relative;
+    display: flex;
+    height: 0.5rem;
+    width: 50vw;
+    margin-top: 10px;
+  }
+  
+  .progress-value {
+    animation: load 3s normal forwards;
+    box-shadow: 0 10px 40px -10px #fff;
+    border-radius: 100px;
+    background: #fff;
+    height: 0.5rem;
+    display: flex;
+  }
+
+  .progress-value:hover{
+    background: green;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+  .progress-value:hover .pointer-progress {
+    opacity: 1;
+    transition: 0.5s;
+  }
+
+  .pointer-progress {
+    opacity: 0;
+    height: 1rem;
+    width: 1rem;
+    background-color: green;
+    position: relative;
+    left: 98%;
+    bottom: 4px;
+    border-radius: 50%;
+  }
+
+  .timing {
+    padding: 5px;
+    color: white;
+  }
+  
+  @keyframes load {
+    0% { width: 0; }
+    100% { width: 68%; }
+  }
+  
+  /* volume bar */
+  .progress-volume {
+    background: rgba(255,255,255,0.1);
+    margin-bottom: 10px;
+    justify-content: flex-start;
+    border-radius: 100px;
+    align-items: center;
+    position: relative;
+    display: flex;
+    height: 0.5rem;
+    width: 5vw;
+    margin-top: 10px;
+  }
+  
+  .progress-value-volume {
+    animation: load 3s normal forwards;
+    box-shadow: 0 10px 40px -10px #fff;
+    border-radius: 100px;
+    background: #fff;
+    height: 0.5rem;
+    display: flex;
+  }
+
+  .progress-value-volume:hover{
+    background: green;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+  .pointer-progress-volume {
+    opacity: 0;
+    height: 1rem;
+    width: 1rem;
+    background-color: green;
+    position: relative;
+    left: 96%;
+    bottom: 4px;
+    border-radius: 50%;
+  }
+
+  .progress-value-volume:hover .pointer-progress-volume {
+    opacity: 1;
+    transition: 0.5s;
+  }
+
+  .timing {
+    padding: 5px;
+    color: white;
+  }
+
+  .center-toolbar i:hover {
+    transform: scale(1.5);
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+/* meida queris */
+
+@media all and(max-width: 1200px) {
+    .card {
+        width: calc(100% / 3 - 20px);
+        aspect-ratio: 1 / 1;
+        border-radius: 10px;
+        margin: 10px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+    }
+}
+
+@media all and (max-width: 992px) {
+    .card {
+        width: calc(100% / 2 - 20px);
+        aspect-ratio: 1 / 1;
+        border-radius: 10px;
+        margin: 10px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .card {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        border-radius: 10px;
+        margin: 10px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    .sidebar .top-sidebar {
+        display: none;
+    }
+
+    .sidebar .bottom-sidebar {
+        height: calc(100vh - 95px);
+        overflow: auto;
+        border-radius: 10px;
+        margin: 5px;
+        background-color: var(--section-background);
+    }
+
+    .nav {
+        height: 80px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: var(--section-background);
+        z-index: 1001;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+
+    .right-toolbar {
+        display: none;
+    }
+}
+
 
 
 
