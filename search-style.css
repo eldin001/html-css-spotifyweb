@@ -1,0 +1,253 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --section-background: #121212;
+    --serch-bar: #242424;
+    --music-card: #CA3189;
+    --podcast-card: #006450;
+    --live-event-card: #8400E7;
+    --for-you-card: #1E3264;
+    --dance-card: #D84000;
+    --focus--card: #503751;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.wrapper {
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    background-color: rgb(0, 0, 0);
+    width: 350px;
+    height: calc(100vh - 80px);
+}
+
+.main {
+    background-color: aquamarine;
+    width: calc(100% - 350px);
+    height: calc(100vh - 90px);
+    overflow: auto;
+    border-radius: 10px;
+    margin: 5px 5px 5px 0;
+    background-color: var(--section-background);
+}
+
+.nav {
+    height: 80px;
+    background-color: bisque;
+    position: sticky;
+    top: 0;
+    right: 0;
+    background-color: var(--section-background);
+    z-index: 1001;
+}
+
+.toolbar {
+    height: 80px;
+    background-color: rebeccapurple;
+}
+
+.top-sidebar {
+    height: 100px;
+    border-radius: 10px;
+    margin: 5px;
+    background-color: var(--section-background);
+}
+
+.bottom-sidebar {
+    height: calc(100vh - 195px);
+    overflow: auto;
+    border-radius: 10px;
+    margin: 5px;
+    background-color: var(--section-background);
+}
+
+
+/* utility spacing*/
+.bg-padding {
+    padding: 30px;
+}
+
+.smll-padding {
+    padding: 10px;
+}
+
+.lft-smll-padding {
+    padding-left: 10px;
+}
+
+.rght-smll-padding {
+    padding-right: 10px;
+}
+
+.smll-gap {
+    gap: 10px;
+}
+
+/* txt utility */
+
+.big-font {
+    font-size: 30px;
+}
+
+.big-font-card {
+    font-size: 25px;
+}
+
+.bg-weight {
+    font-weight: 800;
+}
+
+/* flex-utility */
+.wrap {
+    flex-wrap: wrap;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-content: center;
+    align-items: center;
+}
+
+.column-direction {
+    flex-direction: column;
+}
+
+input {
+    background-color: var(--serch-bar);
+    border-radius: 50px;
+    height: 48px;
+    padding: 6px 36px;
+    border: none;
+    color: white;
+}
+
+/* nav */
+
+.arrow {
+    height: 30px;
+    width: 30px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.arrows {
+    gap: 10px;
+    padding: 10px;
+}
+
+.btn {
+    background-color: black;
+    border-radius: 50px;
+    padding: 10px 15px;
+}
+
+.nav-icon {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* main card  */
+
+.card {
+    width: calc(100% / 4 - 20px);
+    aspect-ratio: 1 / 1;
+    border-radius: 10px;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card.first {
+    background-color: var(--dance-card);
+}
+
+.card.second {
+    background-color: var(--focus--card);
+}
+
+.card.third {
+    background-color: var(--for-you-card);
+}
+
+.card.fourth {
+    background-color: var(--live-event-card);
+}
+
+.card.fifth {
+    background-color: var(--music-card);
+}
+
+.card.sixth {
+    background-color: var(--podcast-card);
+}
+
+.album {
+    width: 50%;
+    position: absolute;
+    right: -20px;
+    bottom: -20px;
+    transform: rotate(40deg);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* sidebar card */
+
+.sidebar-img {
+    width: 50px;
+}
+
+.sidebar-img img {
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
